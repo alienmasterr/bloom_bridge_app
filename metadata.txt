@@ -1,0 +1,8 @@
+[general]
+name=Nasa Data Loader
+description=Nasa Harmony API spectral data loader.
+version=1.0
+qgisMinimumVersion=3.0
+author=
+email=
+icon=icons/plugin_icon.png

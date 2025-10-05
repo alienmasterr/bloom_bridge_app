@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NASADataLoaderDialog</class>
+ <widget class="QDialog" name="NASADataLoaderDialog">
+  <property name="windowTitle">
+   <string>BloomBridge</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+
+   <item>
+    <widget class="QLabel" name="label_dataset">
+     <property name="text">
+      <string>Datasets (text layers only)</string>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="dataset_select"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="dateRangeLayout">
+     <item>
+      <widget class="QLabel" name="label_date_from">
+       <property name="text">
+        <string>Date from</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateTimeEdit" name="date_from">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_date_to">
+       <property name="text">
+        <string>Date to</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateTimeEdit" name="date_to">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="label_location">
+     <property name="text">
+      <string>Locations (coordinates)</string>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="location_select">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="label_load_target">
+     <property name="text">
+      <string>Download NASA pictures</string>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="load_target_radio">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <layout class="QVBoxLayout" name="radioLayout">
+      <item>
+       <widget class="QRadioButton" name="radio_new_layer">
+        <property name="text">
+         <string>New raster layer</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radio_existing_layer">
+        <property name="text">
+         <string>Existing layer</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="label_new_layer_name">
+     <property name="text">
+      <string>Create a new layer for NASA layers</string>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="new_layer_name">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="label_existing_layer">
+     <property name="text">
+      <string>Select a layer NASA</string>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="existing_layer_select">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QPushButton" name="load_button">
+     <property name="text">
+      <string>Download</string>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QProgressBar" name="progress_bar">
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="textVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="progress_status">
+     <property name="text">
+      <string>Status: waiting</string>
+     </property>
+     <property name="styleSheet">
+      <string>color: green; font-size: 12pt; font-weight: bold;</string>
+     </property>
+    </widget>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
